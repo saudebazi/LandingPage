@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Your Website</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 70px;
+            font-family: 'SF Pro', sans-serif;
+        }
+        .section {
+            max-width: 100vw;
+            overflow-x: hidden; /* Prevent horizontal overflow */
+        }
+        .navbar {
+            background-color: #fff; /* Background color for the navigation bar */
+            overflow: hidden;
+            padding: 10px; /* Adjust this value to control the margin */
+        }
+
+        .company-name {
+            float: left;
+            color: #20c997;
+            font-size: 32px;
+            font-weight: 600;
+            line-height: normal;
+            font-variant: all-small-caps;
+            letter-spacing: 0.99px;
+            margin-top: 22px; /* Adjust the margin as needed */
+        }
+
+        .login-register {
+            float: right;
+            margin-left: 0px; /* Adjust the margin as needed */
+        }
+
+        .login-button {
+            display: flex;
+            width: 200px;
+            height: 61px;
+            flex-direction: column;
+            justify-content: center;
+            flex-shrink: 0;
+            border-radius: 30px;
+            background-color: #FFF;
+    border-radius: 60px;
+    border: 4px solid #20c997;; /* Black background color */
+        }
+
+        .login-button a {
+            color: #20c997;
+            font-size: 20px;
+            text-decoration: none;
+            text-align: center;
+            font-variant: all-small-caps;
+            letter-spacing: 0.99px;
+        }
+        .login-button:hover {
+            display: flex;
+            width: 200px;
+            height: 61px;
+            flex-direction: column;
+            justify-content: center;
+            flex-shrink: 0;
+            border-radius: 60px;
+            background-color: #20c997;
+    border-radius: 30px;
+    
+        }
+
+        .login-button:hover a {
+            color: #fff;
+            font-size: 20px;
+            text-decoration: none;
+            text-align: center;
+            font-variant: all-small-caps;
+            letter-spacing: 0.99px;
+        }
+        .hero {
+            background-color: #ffffff;
+            padding: 0px 0;
+            margin: 0px; /* Decreased margin */
+        }
+
+
+.hero-content {
+    width: 790px; /* Set the width of the content */
+    margin: auto; /* Center align the content horizontally */
+    text-align: center;
+    font-family: 'SF Pro', sans-serif;
+    font-size: 82px;
+    font-weight: 600;
+    line-height: normal;
+    color: #000; /* Text color */
+}
+.hero-button {
+    display: flex;
+    width: 200px;
+    height: 61px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+     /* Set the margin from the text and center align horizontally */
+    border-radius: 60px;
+    border: 4px solid #20c997;
+
+    background-color: #fff; /* Black background color */
+    margin: 0 auto 100px auto;
+}
+
+.hero-button a {
+    color: #20c997;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: normal;
+    font-variant: all-small-caps;
+    letter-spacing: 0.99px;
+}
+.hero-button:hover {
+    display: flex;
+    width: 200px;
+    height: 61px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+     /* Set the margin from the text and center align horizontally */
+    border-radius: 60px;
+    background-color: #20c997; /* Black background color */
+    margin: 0 auto 100px auto;
+}
+
+.hero-button:hover a {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: normal;
+    font-variant: all-small-caps;
+    letter-spacing: 0.99px;
+}
+
+.featured-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 150px;
+    flex-shrink: 0;
+    align-items: center; /* Center vertically */
+    margin: auto auto; /* Decreased margin */
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.featured-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align text to the left */
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    font-variant: all-small-caps;
+    letter-spacing: 0.99px;
+    color: #000;
+    margin: 0;
+}
+
+.see-more-container {
+    display: flex;
+    float: right;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end; /* Align "See More" button to the bottom */
+}
+
+.see-more-button a {
+    color: #2E2E2E;
+    text-decoration: none;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* Add vertical margin between sections */
+        min-height: 60px; /* Adjust for margin between sections */
+        margin-top: 12px;
+    }
+
+    .cards-scroll-container {
+        overflow-x: auto;
+        width: 100%;
+        
+    }
+
+    .cards-container {
+        display: flex;
+        flex-wrap: nowrap; /* Prevent cards from wrapping to the next line */
+    }
+    /* Add a scrollbar to the cards container */
+.cards-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Add a horizontal scrollbar */
+    scrollbar-width: none; /* Hide the default scrollbar (for Firefox) */
+    -webkit-scrollbar-width: none; /* Hide the default scrollbar (for WebKit) */
+}
+
+/* Style the scrollable line */
+.cards-container::-webkit-scrollbar {
+    width: 0; /* Hide the scrollbar (for WebKit) */
+}
+
+.cards-container::-webkit-scrollbar-track {
+    background: transparent; /* Background of the scrollbar track */
+}
+
+.cards-container::-webkit-scrollbar-thumb {
+    background: #ccc; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Radius of the scrollbar thumb */
+}
+
+
+    .card {
+        width: 240px;
+        height: 200px;
+        flex-shrink: 0;
+        border-radius: 25px;
+        background: #20c997;
+        padding-bottom: 50px;
+        padding-left: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-right: 50px; /* Add margin between cards */
+    }
+
+    .commodity-name {
+        color: #FFF;
+        font-size: 32px;
+        font-weight: 590;
+        margin-left: 40px;
+    }
+
+    .commodity-details {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .commodity-details p {
+        color: #FFF;
+        font-size: 14px;
+        font-weight: 400;
+        margin: 2px;
+        padding-left: 40px;
+    }
+
+.button-section {
+    text-align: center;
+}
+
+.enter-button {
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    width: 229.68px;
+    height: 60.455px;
+    flex-shrink: 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #FFF;
+    border-radius: 60px;
+    border: 4px solid #20c997;
+    margin: 85px auto 200px auto;
+}
+
+.enter-button a {
+    text-decoration: none;
+    color: #20c997;
+}
+.enter-button:hover {
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    width: 229.68px;
+    height: 60.455px;
+    flex-shrink: 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    background-color: #20c997;
+    border-radius: 60px;
+    margin: 85px auto 200px auto;
+}
+
+.enter-button:hover a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.signup-section {
+    display: flex;
+    margin-top: 423px;
+    margin-bottom: 300px;
+    width: 100%; /* Use full width */
+    height: 70px; /* Use full viewport height */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center both horizontally and vertically */
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.signup-text {
+    color: #000;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 70px;
+}
+
+.centered-text-field {
+    display: flex;
+    
+    
+    width: 570px;
+    height: 53px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    text-align: left;
+}
+.centered-text-field-2 {
+    display: flex;
+    width: 570px;
+    height: 145px;
+    flex-direction: column;
+    flex-shrink: 0;
+    text-align: justify;
+}
+
+.centered-text {
+    color: #000;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 15.5px;
+    border: 3px solid #20c997;
+    background: rgba(255, 255, 255, 0.70);
+    padding: 15px;
+}
+.centered-text-2 {
+    color: #000;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 15.5px;
+    border: 3px solid #20c997;
+    background: rgba(255, 255, 255, 0.70);
+    padding: 15px 11px 80px 15px;
+}
+
+
+.submit-button {
+    display: flex;
+    width: 200px;
+    height: 61px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    text-align: center;
+    border-radius: 32px;
+    color: #000;
+    background-color: #FFF;
+    border: 4px solid #20c997;
+    margin:auto auto; 
+    margin-top: 40px;
+}
+
+.submit-button:hover {
+    display: flex;
+    width: 200px;
+    height: 61px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    text-align: center;
+    background-color: #20c997; 
+    border-radius: 32px;
+    margin:auto auto; 
+    margin-top: 40px;
+    
+}
+.submit-button button {
+    color: #20c997;
+    text-decoration: none;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border: none; /* Remove default button border */
+    background: none; /* Remove default button background */
+    cursor: pointer;
+    font-variant: all-small-caps;
+    letter-spacing: 0.99px;
+}
+.submit-button:hover button {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border: none; /* Remove default button border */
+    background: none; /* Remove default button background */
+    cursor: pointer;
+    font-variant: all-small-caps;
+    letter-spacing: 0.99px;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="company-name">
+           Saudebazi.com 
+        </div>
+        <div class="login-register">
+            <div class="login-button">
+                <a href="#">Login/Register</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="hero">
+        <div class="hero-content">
+            <p>Discover the Flavor of Spice Markets</p>
+        </div>
+    </div>
+
+    <div class="hero-button">
+        <a href="#">Get Started</a>
+    </div>
+
+
+    <div class="featured-section">
+        <div class="featured-text">
+            <p>Featured Commodities</p>
+        </div>
+        <div class="see-more-container">
+            <div class="see-more-button">
+                <a href="#">See More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content-container">
+        <div class="cards-scroll-container">
+            <div class="cards-container">
+                <!-- First Card -->
+                <div class="card">
+                    <div class="card-content">
+                        <div class="commodity-name">
+                            <p>Ajwain</p>
+                        </div>
+                        <div class="commodity-details">
+                            <p>Grade1 • Baroda</p>
+                            <p>Grade1 • Baroda</p>
+                            <p>Grade1 • Baroda</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Second Card -->
+                <div class="card">
+                    <div class="card-content">
+                        <div class="commodity-name">
+                            <p>Dry Chilli</p>
+                        </div>
+                        <div class="commodity-details">
+                            <p>Grade1 • Baroda</p>
+                            <p>Grade1 • Baroda</p>
+                            <p>Grade1 • Baroda</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Third Card -->
+                <div class="card">
+                    <div class="card-content">
+                        <div class="commodity-name">
+                            <p>Cumin</p>
+                        </div>
+                        <div class="commodity-details">
+                            <p>Grade1 • Baroda</p>
+                            <p>Grade1 • Baroda</p>
+                            <p>Grade1 • Baroda</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fourth Card -->
+                <div class="card">
+                    <div class="card-content">
+                        <div class="commodity-name">
+                            <p>Coriander</p>
+                        </div>
+                        <div class="commodity-details">
+                            <p>Grade1 • Baroda</p>
+                            <p>Grade1 • Baroda</p>
+                            <p>Grade1 • Baroda</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fifth Card -->
+                <div class="card">
+                    <div class="card-content">
+                        <div class="commodity-name">
+                            <p>Coriander</p>
+                        </div>
+                        <div class="commodity-details">
+                            <p>Grade1 • Baroda</p>
+                            <p>Grade1 • Baroda</p>
+                            <p>Grade1 • Baroda</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more cards as needed -->
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="button-section">
+        <div class="enter-button">
+            <a href="#">Enter Marketwatch</a>
+        </div>
+    </div>
+</div>
+
+<div class="signup-section" >
+    
+    <div class="signup-text">
+        Sign up for a regular roundup of Pricing details and Queries. It might just spark something for you.
+    </div>
+    <div class="centered-text-field">
+        <input class="centered-text" type="text" id="field1" name="field1" placeholder="Enter your Name." required>
+    </div>
+    <div class="centered-text-field" style="margin-top: 20px;">
+        <input class="centered-text" type="text" id="field1" name="field1" placeholder="Enter your Email address." required>
+
+    </div>
+    <div class="centered-text-field" style="margin-top: 20px;">
+        <input class="centered-text" type="text" id="field1" name="field1" placeholder="Enter your Phone Number." required>
+    </div>
+    <div class="centered-text-field-2" style="margin-top: 20px;">
+        <input class="centered-text-2" type="text" id="field1" name="field1" placeholder="Message.">
+    </div>
+    <div class="submit-button">
+        <button type="submit">Submit</button>
+    </div>
+</div>
+
+    </body>
+    </html>
+        
+    
